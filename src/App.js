@@ -1,8 +1,7 @@
-// import Home from "./pages/home/Home";
-import PersonIcon from "@mui/icons-material/Person";
+import Home from "./pages/home/Home";
 
 function App() {
-  return <PersonIcon />;
+  return <Home />;
 }
 
 export default App;
