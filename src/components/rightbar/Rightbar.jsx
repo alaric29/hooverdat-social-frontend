@@ -1,5 +1,7 @@
 import React from "react";
 import "./rightbar.css";
+import { Users } from "../../dummyData";
+import Online from "../online/Online";
 
 export default function Rightbar() {
   return (
@@ -13,130 +15,12 @@ export default function Rightbar() {
               today
             </span>
           </div>
-          <img className="rightbarAd" src="assets/ad.png" alt="" />
+          <img className="rightbarAd" src="assets/chinchmeet.png" alt="" />
           <h4 className="rightbarTitle">Online Friends</h4>
           <ul className="rightbarFriendsList">
-            <li className="rightbarFriend">
-              <div className="rightbarProfileImgContainer">
-                <img
-                  className="rightbarProfileImg"
-                  src="assets/person/3.jpeg"
-                  alt=""
-                />
-                <span className="rightbarOnline"></span>
-              </div>
-              <span className="rightbarUsername">Jake Daxster</span>
-            </li>
-            <li className="rightbarFriend">
-              <div className="rightbarProfileImgContainer">
-                <img
-                  className="rightbarProfileImg"
-                  src="assets/person/3.jpeg"
-                  alt=""
-                />
-                <span className="rightbarOnline"></span>
-              </div>
-              <span className="rightbarUsername">Jake Daxster</span>
-            </li>
-            <li className="rightbarFriend">
-              <div className="rightbarProfileImgContainer">
-                <img
-                  className="rightbarProfileImg"
-                  src="assets/person/3.jpeg"
-                  alt=""
-                />
-                <span className="rightbarOnline"></span>
-              </div>
-              <span className="rightbarUsername">Jake Daxster</span>
-            </li>
-            <li className="rightbarFriend">
-              <div className="rightbarProfileImgContainer">
-                <img
-                  className="rightbarProfileImg"
-                  src="assets/person/3.jpeg"
-                  alt=""
-                />
-                <span className="rightbarOnline"></span>
-              </div>
-              <span className="rightbarUsername">Jake Daxster</span>
-            </li>
-            <li className="rightbarFriend">
-              <div className="rightbarProfileImgContainer">
-                <img
-                  className="rightbarProfileImg"
-                  src="assets/person/3.jpeg"
-                  alt=""
-                />
-                <span className="rightbarOnline"></span>
-              </div>
-              <span className="rightbarUsername">Jake Daxster</span>
-            </li>
-            <li className="rightbarFriend">
-              <div className="rightbarProfileImgContainer">
-                <img
-                  className="rightbarProfileImg"
-                  src="assets/person/3.jpeg"
-                  alt=""
-                />
-                <span className="rightbarOnline"></span>
-              </div>
-              <span className="rightbarUsername">Jake Daxster</span>
-            </li>
-            <li className="rightbarFriend">
-              <div className="rightbarProfileImgContainer">
-                <img
-                  className="rightbarProfileImg"
-                  src="assets/person/3.jpeg"
-                  alt=""
-                />
-                <span className="rightbarOnline"></span>
-              </div>
-              <span className="rightbarUsername">Jake Daxster</span>
-            </li>
-            <li className="rightbarFriend">
-              <div className="rightbarProfileImgContainer">
-                <img
-                  className="rightbarProfileImg"
-                  src="assets/person/3.jpeg"
-                  alt=""
-                />
-                <span className="rightbarOnline"></span>
-              </div>
-              <span className="rightbarUsername">Jake Daxster</span>
-            </li>
-            <li className="rightbarFriend">
-              <div className="rightbarProfileImgContainer">
-                <img
-                  className="rightbarProfileImg"
-                  src="assets/person/3.jpeg"
-                  alt=""
-                />
-                <span className="rightbarOnline"></span>
-              </div>
-              <span className="rightbarUsername">Jake Daxster</span>
-            </li>
-            <li className="rightbarFriend">
-              <div className="rightbarProfileImgContainer">
-                <img
-                  className="rightbarProfileImg"
-                  src="assets/person/3.jpeg"
-                  alt=""
-                />
-                <span className="rightbarOnline"></span>
-              </div>
-              <span className="rightbarUsername">Jake Daxster</span>
-            </li>
-            <li className="rightbarFriend">
-              <div className="rightbarProfileImgContainer">
-                <img
-                  className="rightbarProfileImg"
-                  src="assets/person/3.jpeg"
-                  alt=""
-                />
-                <span className="rightbarOnline"></span>
-              </div>
-              <span className="rightbarUsername">Jake Daxster</span>
-            </li>
+            {Users.map((u) => (
+              <Online key={u.id} user={u} />
+            ))}
           </ul>
         </div>
       </div>
