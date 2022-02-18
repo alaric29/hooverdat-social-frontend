@@ -9,6 +9,8 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import EventIcon from "@mui/icons-material/Event";
 import SchoolIcon from "@mui/icons-material/School";
+import { Users } from "../../dummyData";
+import CloseFriend from "../closeFriend/CloseFriend";
 
 export default function Leftbar() {
   return (
@@ -55,110 +57,9 @@ export default function Leftbar() {
         <button className="leftbarButton">Show More</button>
         <hr className="leftbarHr" />
         <ul className="leftbarFriendList">
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
-          <li className="leftbarFriend">
-            <img
-              className="leftbarFriendImage"
-              src="/assets/person/2.jpeg"
-              alt=""
-            />
-            <span className="leftbarFriendName">Jamie Dough</span>
-          </li>
+          {Users.map((u) => (
+            <CloseFriend key={u.id} user={u} />
+          ))}
         </ul>
       </div>
     </div>
